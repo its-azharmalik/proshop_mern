@@ -8,6 +8,9 @@ hooks:
     - location: scripts/application_stop.sh
       timeout: 300
       runas: ec2-user
+    - location: bin/wait_for_bootstrap.sh
+      runas: root
+      
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
